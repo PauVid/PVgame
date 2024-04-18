@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 400px;
+  min-height: 100vh;
+  background-image: url("./assets/BODY_BG_2.png");
+  background-position: top;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  width: 300px;
+  min-width: 300px;
+  height: 260px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 45px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 390px) {
+
+  #app{
+    height: 250px;
+    width: 200px;
+  }
+
+  .used,
+  .unused,
+  .equis,
+  .redonda {
+    width: 56px !important;
+    height: 56px !important;
+  }
+  .resetBg {
+    bottom: 12% !important;
+  }
+  
+}
+
+.bg_tablero {
+  background-image: url("./assets/BG_04.png");
+  background-position: center;
+  background-size: cover; 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+  top: 260px;
+  z-index: 1;
+  max-height: 378px;
+  max-width: 319px;
+  min-width: 319px;
+}
+
+.unused {
+  width: 60px;
+  height: 60px;
+  background-image: url("./assets/unused_bg.png");
+  background-position: center;
+  background-size: cover; 
+  z-index: 2;
+}
+
+.equis {
+  background-image: url("./assets/EQUIS_BG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+}
+
+.redonda {
+  background-image: url("./assets/REDONDA_BG.png"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+}
+
+
+.resetBg{
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+
+.reset{
+  position: relative;
+  top: 97px;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: #c9c9c9;
+  background-color: transparent;
+  border: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 900;
+  font-size: 11px;
+}
+
+.restartButtonImg{
+  background-image: url("./assets/bg_05.png");
+  height: 135px;
+  width: 137px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 75px;
+}
