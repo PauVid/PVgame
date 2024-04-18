@@ -54,6 +54,10 @@ h1 {
   .resetBg {
     bottom: 12% !important;
   }
+
+  .bg_tablero {
+    top: 205px !important;
+  }
   
 }
 
