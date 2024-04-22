@@ -56,7 +56,7 @@ const winnerPop = () => {
         <img src="./assets/user_text_img.png">
         <h3>¡Enhorabuena!</h3>
         <p>Has conseguido derrotar al más malvado de los malvados</p>
-        <button class="refresh-btn" onClick="location.reload()">Mátalo otra vez 😈</button>
+        <button class="refresh-btn" onClick="location.reload()">Mátalo otra vez en otro juego 😈</button>
 
     `;
     body.append(popupDiv);

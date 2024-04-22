@@ -1,111 +1,66 @@
 import { Layout } from './layout';
+import { juego1 } from './tresEnRaya.js';
 import './style.css'
 
-Layout();
+
+// 3 EN RAYA
+function game1() {
+  Layout();
+  juego1();
+}
 
 
-const cuadros = [];
-let jugadorAct = "equis"; 
-let finJuego = false;
+// Game 2: Another Game
+function game2() {
+  // Another game logic here
+};
 
-const mesa = () => {
+// Game 3: Yet Another Game
+function game3() {
+  // Yet another game logic here
+};
+
+// Function to initialize game selection
+const selectGame = (gameNumber) => {
+  // Clear existing game content
+  const app = document.querySelector("#app");
+  app.innerHTML = "";
+
+  // Load the selected game based on the gameNumber
+  switch (gameNumber) {
+      case 1:
+          game1();
+          break;
+      case 2:
+          game2();
+          break;
+      case 3:
+          game3();
+          break;
+      default:
+          console.error("Aquí no hay ningún juego");
+  }
+};
+
+const main = () => {
   const tablero = document.querySelector("#app");
 
-  for (let i = 1; i <= 9; i++) {
-    const dividers = document.createElement("div");
-    dividers.classList.add("unused");
-    tablero.append(dividers);
-    cuadros.push(dividers);
-  }
+  // Display game selection buttons
+  const gameButtons = document.createElement("div");
+  const gameButtonLabels = ["3 EN RAYA", "Game 2", "Game 3"];
+  const gameFunctions = [game1, game2, game3]; // Array of game functions
 
-  distincionDiv();
-
-  const app = document.querySelector("#app");
-  const bgTablero = document.createElement("div");
-  const bgButton = document.createElement("div");
-  const restartButtonImg = document.createElement("img");
-  const restartButton = document.createElement("button");
-  restartButton.innerText = "Restart Game";
-  restartButton.classList.add("reset");
-  restartButtonImg.classList.add("restartButtonImg");
-  bgTablero.classList.add("bg_tablero");
-  bgButton.classList.add("resetBg");
-  bgButton.append(restartButtonImg);
-  bgButton.append(restartButton);
-  app.append(bgTablero);
-  app.append(bgButton);
-
-  restartButton.addEventListener("click", resetJuego);
-};
-
-const distincionDiv = () => {
-  cuadros.forEach(function(elem, index) {
-    elem.addEventListener("click", function() {
-      if (!finJuego && !elem.classList.contains("used")) {
-        elem.classList.remove("unused");
-        elem.classList.add("used", jugadorAct);
-
-        const ganador = comprobacionGanador();
-        const empate = comprobacionEmpate();
-        
-        if (ganador) {
-          console.log(`¡El ganador es: ${ganador}!`);
-          finJuego = true; 
-          document.querySelector(".popup_div").classList.remove("invisible");
-        } else if (empate) {
-          console.log("¡Has empatado!");
-          finJuego = true; 
-        } else {
-          jugadorAct = jugadorAct === "equis" ? "redonda" : "equis";
-          if (jugadorAct === "redonda") {
-
-            movMaquina();
-          }
-        }
-      }
+  gameButtonLabels.forEach((label, index) => {
+    const button = document.createElement("button");
+    button.textContent = label;
+    button.addEventListener("click", () => {
+      selectGame(index + 1); // Index is zero-based, so add 1 to match game numbers
     });
+    gameButtons.appendChild(button);
   });
+
+  tablero.appendChild(gameButtons);
 };
 
-const comprobacionGanador = () => {
-  const posibilidadesV = [
-    [0, 1, 2], [3, 4, 5], [6, 7, 8], 
-    [0, 3, 6], [1, 4, 7], [2, 5, 8], 
-    [0, 4, 8], [2, 4, 6] 
-  ];
-
-  for (const posibilidad of posibilidadesV) {
-    const [a, b, c] = posibilidad;
-    if (
-      cuadros[a].classList.contains("used") &&
-      cuadros[a].classList.contains(cuadros[b].classList[1]) &&
-      cuadros[a].classList.contains(cuadros[c].classList[1])
-    ) {
-      return cuadros[a].classList[1]; 
-    }
-  }
-
-  return null; 
-};
-
-const comprobacionEmpate = () => {
-  return cuadros.every(square => square.classList.contains("used"));
-};
-
-const resetJuego = () => {
-  cuadros.forEach(function(e) {
-    e.classList.remove("used", "equis", "redonda");
-    e.classList.add("unused");
-  });
-  jugadorAct = "equis"; 
-  finJuego = false;
-};
-
-const movMaquina = () => {
-  
-  const unusedCuadros = cuadros.filter(square => square.classList.contains("unused"));
-  const randomCuadros = unusedCuadros[Math.floor(Math.random() * unusedCuadros.length)];
-  randomCuadros.click();
-};
-
-mesa();
+// Call main function to initialize the game selection UI
+main();

@@ -12,7 +12,7 @@ body {
   justify-content: center;
   min-width: 400px;
   min-height: 100vh;
-  background-image: url("/public/assets/BODY_BG_2.png");
+  background-image: url("/assets/BODY_BG_2.png");
   background-position: top;
   background-size: cover;
 }
@@ -62,7 +62,7 @@ h1 {
 }
 
 .bg_tablero {
-  background-image: url("/public/assets/BG_04.png");
+  background-image: url("/assets/BG_04.png");
   background-position: center;
   background-size: cover; 
   width: 100%;
@@ -79,14 +79,14 @@ h1 {
 .unused {
   width: 60px;
   height: 60px;
-  background-image: url("/public/assets/unused_bg.png");
+  background-image: url("/assets/unused_bg.png");
   background-position: center;
   background-size: cover; 
   z-index: 2;
 }
 
 .equis {
-  background-image: url("/public/assets/EQUIS_BG.png");
+  background-image: url("/assets/EQUIS_BG.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 60px;
@@ -95,7 +95,7 @@ h1 {
 }
 
 .redonda {
-  background-image: url("/public/assets/REDONDA_BG.png"); 
+  background-image: url("/assets/REDONDA_BG.png"); 
   background-size: cover;
   background-repeat: no-repeat;
   width: 60px;
@@ -128,7 +128,7 @@ h1 {
 }
 
 .restartButtonImg{
-  background-image: url("/public/assets/bg_05.png");
+  background-image: url("/assets/bg_05.png");
   height: 135px;
   width: 137px;
   background-size: contain;
