@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #app {
+    text-align: center;
+    width: 425px;
+  }
+  
+  #restartButton, #backButton {
+    margin-bottom: 10px;
+  }
+  
+  #puntuacion, #reloj {
+    margin-bottom: 20px;
+  }
+  
+  .personaje {
+    width: 80px;
+    height: 80px;
+    z-index: 9;
+    background-image: url('/assets/GUAC_U_01.png');
+    background-size: cover;
+    background-position: center;
+    transition: all .2s;
+  }
+
+  .personaje:active {
+    transform: scale(1.1);
+    background-image: url('/assets/GUAC_U_02.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .agujero {
+    background-image: url('/assets/GUAC_BG.png');
+    background-size: cover;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 5px;
+    position: relative;
+  }
+  
+  .gameContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }

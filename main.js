@@ -1,6 +1,8 @@
 import { Layout } from './layout';
 import { juego1 } from './tresEnRaya.js';
 import './style.css'
+import { juego2 } from './memory_game.js';
+import { juego3 } from './guacAMole.js';
 
 
 // 3 EN RAYA
@@ -10,14 +12,14 @@ function game1() {
 }
 
 
-// Game 2: Another Game
+// JUEGO DE MEMORIA
 function game2() {
-  // Another game logic here
+  juego2();
 };
 
-// Game 3: Yet Another Game
+// GUAC-A-MOLE
 function game3() {
-  // Yet another game logic here
+  juego3()
 };
 
 // Function to initialize game selection
@@ -47,7 +49,7 @@ const main = () => {
 
   // Display game selection buttons
   const gameButtons = document.createElement("div");
-  const gameButtonLabels = ["3 EN RAYA", "Game 2", "Game 3"];
+  const gameButtonLabels = ["3 EN RAYA", "JUEGO DE MEMORIA", "GUAC-A-MOLE"];
   const gameFunctions = [game1, game2, game3]; // Array of game functions
 
   gameButtonLabels.forEach((label, index) => {

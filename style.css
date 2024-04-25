@@ -12,7 +12,7 @@ body {
   justify-content: center;
   min-width: 400px;
   min-height: 100vh;
-  background-image: url("/assets/BODY_BG_2.png");
+  /* background-image: url("/assets/BODY_BG_2.png"); */
   background-position: top;
   background-size: cover;
 }
