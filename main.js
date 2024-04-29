@@ -22,13 +22,11 @@ function game3() {
   juego3()
 };
 
-// Function to initialize game selection
 const selectGame = (gameNumber) => {
-  // Clear existing game content
+
   const app = document.querySelector("#app");
   app.innerHTML = "";
 
-  // Load the selected game based on the gameNumber
   switch (gameNumber) {
       case 1:
           game1();
@@ -47,16 +45,17 @@ const selectGame = (gameNumber) => {
 const main = () => {
   const tablero = document.querySelector("#app");
 
-  // Display game selection buttons
   const gameButtons = document.createElement("div");
+  gameButtons.classList.add("mainDiv");
   const gameButtonLabels = ["3 EN RAYA", "JUEGO DE MEMORIA", "GUAC-A-MOLE"];
-  const gameFunctions = [game1, game2, game3]; // Array of game functions
+  const gameFunctions = [game1, game2, game3]; 
 
   gameButtonLabels.forEach((label, index) => {
     const button = document.createElement("button");
+    button.classList.add("main-btn");
     button.textContent = label;
     button.addEventListener("click", () => {
-      selectGame(index + 1); // Index is zero-based, so add 1 to match game numbers
+      selectGame(index + 1);
     });
     gameButtons.appendChild(button);
   });
@@ -64,5 +63,4 @@ const main = () => {
   tablero.appendChild(gameButtons);
 };
 
-// Call main function to initialize the game selection UI
 main();

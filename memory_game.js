@@ -165,15 +165,20 @@ export function juego2() {
         window.history.back();
     }
 
+    const buttonsDiv = document.createElement('div');
+    buttonsDiv.classList.add("buttonDiv")
+
     const restartButton = document.createElement('button');
     restartButton.textContent = 'Restart Game';
     restartButton.addEventListener('click', restartGame);
-    document.body.appendChild(restartButton);
+    buttonsDiv.appendChild(restartButton);
 
     const backButton = document.createElement('button');
     backButton.textContent = 'Go Back';
     backButton.addEventListener('click', goBack);
-    document.body.appendChild(backButton);
+    buttonsDiv.appendChild(backButton);
+
+    document.body.appendChild(buttonsDiv);
 
     cartaCreation();
 }

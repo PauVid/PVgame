@@ -9,6 +9,9 @@ body {
   #app {
     text-align: center;
     width: 425px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
   }
   
   #restartButton, #backButton {
@@ -54,3 +57,22 @@ body {
     flex-wrap: wrap;
     justify-content: center;
   }
+
+.buttons {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    bottom: 200px;
+}
+
+.buttons > button {
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.info {
+    position: absolute;
+    top: 100px;
+}
