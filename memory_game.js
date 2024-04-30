@@ -133,7 +133,15 @@ export function juego2() {
             carta2.matched = true;
             puntuacion++;
             if (puntuacion === 5) { 
-                alert('Congratulations! You won!');
+                const winnerMsg = document.createElement("div");
+                winnerMsg.innerHTML(`
+                <h3>¡Enhorabuena aventurero/a!</h3>
+                <p>Has logrado debilitar al malvado villano... aún así, no podemos cantar victória. Ahora es aún más peligroso que antes... tenemos que seguir.</p>
+                `);
+                const backButton = document.createElement('button');
+                backButton.textContent = 'Siguiente juego';
+                backButton.addEventListener('click', goBack);
+                buttonsDiv.appendChild(backButton);
             }
         } else {
             carta1.flipped = false;
@@ -162,7 +170,7 @@ export function juego2() {
 
     function goBack() {
 
-        window.history.back();
+        window.location.reload();
     }
 
     const buttonsDiv = document.createElement('div');
@@ -173,10 +181,10 @@ export function juego2() {
     restartButton.addEventListener('click', restartGame);
     buttonsDiv.appendChild(restartButton);
 
-    const backButton = document.createElement('button');
-    backButton.textContent = 'Go Back';
-    backButton.addEventListener('click', goBack);
-    buttonsDiv.appendChild(backButton);
+    // const backButton = document.createElement('button');
+    // backButton.textContent = 'Go Back';
+    // backButton.addEventListener('click', goBack);
+    // buttonsDiv.appendChild(backButton);
 
     document.body.appendChild(buttonsDiv);
 
