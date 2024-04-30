@@ -54,8 +54,10 @@ const winnerPop = () => {
     popupDiv.classList.add("invisible");
     popupDiv.innerHTML = `
         <img src="./assets/user_text_img.png">
-        <h3>¡Enhorabuena!</h3>
-        <p>Has conseguido derrotar al más malvado de los malvados</p>
+        <h3>¡Enhorabuena, valiente héroe/heroína! </h3>
+        <p>Con tu astucia y valentía, has derrotado al villano y liberado al reino de su maligno dominio. 
+        Tu coraje será recordado por generaciones venideras.
+        ¡Que la luz y la paz reinen de nuevo gracias a ti!</p>
         <button class="refresh-btn" onClick="location.reload()">Mátalo otra vez en otro juego 😈</button>
 
     `;

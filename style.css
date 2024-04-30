@@ -5,6 +5,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
@@ -15,7 +17,7 @@ body {
   justify-content: center;
   min-width: 400px;
   min-height: 100vh;
-  height: 110vh;
+  height: auto;
   background-image: url("/assets/BODY_BG_2.jpg");
   background-position: top;
   background-size: cover;
@@ -142,22 +144,39 @@ h1 {
   top: 75px;
 }
 
+
+h1, p {
+  color: white;
+  margin-bottom: 40px;
+
+}
+
+h1{
+  line-height: 0.9;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
 .mainDiv {
   margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
 }
 
 .main-btn {
-  padding: 10px 20px;
+  padding: 20px 70px;
   background-color: white;
   border: none;
   border-radius: 6px;
   font-family: "VT323", monospace;
   font-weight: 400;
   font-style: normal;
+  font-size: 18px;
 }
 
 

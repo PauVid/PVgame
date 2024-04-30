@@ -45,6 +45,12 @@ const selectGame = (gameNumber) => {
 const main = () => {
   const tablero = document.querySelector("#app");
 
+  const mainText = document.createElement("h1");
+  mainText.textContent = '¡Bienvenido/a a la mazmorra de los desafíos!';
+  const text = document.createElement("p");
+  text.classList.add("text-home");
+  text.textContent = 'Aquí aguarda un villano astuto que solo puede ser derrotado superando tres desafíos: un trepidante tres en raya, un frenético guac-a-mole y un desafiante juego de memoria. ¿Estás listo/a para enfrentarte a estos desafíos y salvar el reino de la oscuridad? Adelante, aventurero/a, el destino espera tu valentía.';
+
   const gameButtons = document.createElement("div");
   gameButtons.classList.add("mainDiv");
   const gameButtonLabels = ["3 EN RAYA", "JUEGO DE MEMORIA", "GUAC-A-MOLE"];
@@ -57,10 +63,11 @@ const main = () => {
     button.addEventListener("click", () => {
       selectGame(index + 1);
     });
-    gameButtons.appendChild(button);
+    gameButtons.append(button);
   });
-
-  tablero.appendChild(gameButtons);
+  tablero.append(mainText);
+  tablero.append(text);
+  tablero.append(gameButtons);
 };
 
 main();
