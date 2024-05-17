@@ -1,4 +1,5 @@
 import './memory_game.css'; 
+import './memory_game.css'; 
 
 export function juego2() {
     const cartas = [
@@ -35,7 +36,7 @@ export function juego2() {
 
         cartas.forEach(carta => {
             const cartaElement = document.createElement('img');
-            cartaElement.src = cartas[0].background;
+            cartaElement.src = carta.background;  // Aquí cambiamos a carta.background
             cartaElement.classList.add(carta.title);
             cartaElement.classList.add("carta");
             body.append(cartaElement);
@@ -89,7 +90,7 @@ export function juego2() {
             document.querySelectorAll('.carta').forEach(cartaElement => {
                 const carta = cartas.find(c => c.title === cartaElement.classList[0]);
                 if (!carta.matched) {
-                    cartaElement.src = cartas[0].background;
+                    cartaElement.src = carta.background;
                 }
             });
         }
