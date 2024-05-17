@@ -1,5 +1,38 @@
+:root {
+    /* MARGIN */
+    --pv-margin-xs: 10px;
+    --pv-margin-s: 20px;
+    --pv-margin-m: 30px;
+    --pv-margin-l: 40px;
+    --pv-margin-xl: 50px;
+  
+    /* PADDING */
+    --pv-padding-xs: 10px;
+    --pv-padding-s: 20px;
+    --pv-padding-m: 30px;
+    --pv-padding-l: 40px;
+    --pv-padding-xl: 50px;
+  
+    /* GAP */
+    --pv-gap-xs: 10px;
+    --pv-gap-s: 15px;
+    --pv-gap-m: 20px;
+    --pv-gap-l: 25px;
+    --pv-gap-xl: 30px;
+  
+    /* BORDER RADIUS */
+  
+    --pv-borderR-s: 6px;
+    --pv-borderR-m: 8px;
+    
+  }
+
+  #app {
+    max-width: 384px !important;
+  }
+
 .carta {
-    width: 70px;
+    width: 60px;
 }
 
 .buttonDiv{
@@ -7,12 +40,40 @@
     top: 100px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--pv-gap-m);
 }
 
 .buttonDiv > button {
     padding: 10px 20px;
     background-color: white;
     border: none;
+    border-radius: var(--pv-borderR-s);
+}
+
+.winner {
+    background-color: #161616;
+    margin: auto;
+    width: 70%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.winner > h3 {
+    color: white;
+    font-size: 25px;
+}
+
+.winner > p {
+    margin-bottom: 0;
+}
+
+.winner > button {
+    padding: 10px;
     border-radius: 6px;
+    border: none;
 }

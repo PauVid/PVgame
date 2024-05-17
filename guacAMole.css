@@ -1,5 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+:root {
+  /* MARGIN */
+  --pv-margin-xs: 10px;
+  --pv-margin-s: 20px;
+  --pv-margin-m: 30px;
+  --pv-margin-l: 40px;
+  --pv-margin-xl: 50px;
+
+  /* PADDING */
+  --pv-padding-xs: 10px;
+  --pv-padding-s: 20px;
+  --pv-padding-m: 30px;
+  --pv-padding-l: 40px;
+  --pv-padding-xl: 50px;
+
+  /* GAP */
+  --pv-gap-xs: 10px;
+  --pv-gap-s: 20px;
+  --pv-gap-m: 30px;
+  --pv-gap-l: 40px;
+  --pv-gap-xl: 50px;
+
+  /* BORDER RADIUS */
+
+  --pv-borderR-s: 6px;
+  --pv-borderR-m: 8px;
+  
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -17,11 +46,11 @@ body {
   }
   
   #restartButton, #backButton {
-    margin-bottom: 10px;
+    margin-bottom: var(--pv-margin-xs);
   }
   
   #puntuacion, #reloj {
-    margin-bottom: 20px;
+    margin-bottom: var(--pv-margin-s);
   }
   
   .personaje {
@@ -68,10 +97,10 @@ body {
 }
 
 .buttons > button {
-  padding: 10px 20px;
+  padding: var(--pv-padding-xs) var(--pv-padding-s);
   background-color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: var(--pv-borderR-s);
 }
 
 .info {
@@ -82,4 +111,42 @@ body {
     font-weight: 400;
     font-style: normal;
 
+}
+
+#reiniciarBoton, 
+#atrasBoton {
+  padding: 8px var(--pv-padding-l);
+  margin-right: var(--pv-margin-xs);
+  border-radius: var(--pv-borderR-s);
+  border: none;
+}
+
+.botones {
+  padding-bottom: var(--pv-padding-s);
+}
+
+.informacion {
+  margin-bottom: var(--pv-margin-xs);
+  background-color: #f1f1f1;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.winner {
+  background-color: aliceblue;
+    width: 70%;
+    position: absolute;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.winner > h3 {
+  font-size: 20px;
+  color: #161616;
+}
+
+.winner > p {
+  color: #161616;
 }

@@ -7,30 +7,29 @@ export function juego1() {
   
   const mesa = () => {
     const tablero = document.querySelector("#app");
+    const quadblero = document.createElement("div");
+    quadblero.classList.add("quadblero");
   
     for (let i = 1; i <= 9; i++) {
       const dividers = document.createElement("div");
       dividers.classList.add("unused");
-      tablero.append(dividers);
+      quadblero.append(dividers);
+      tablero.append(quadblero)
       cuadros.push(dividers);
     }
+
+    
   
     distincionDiv();
   
     const app = document.querySelector("#app");
     const bgTablero = document.createElement("div");
-    const bgButton = document.createElement("div");
-    const restartButtonImg = document.createElement("img");
     const restartButton = document.createElement("button");
     restartButton.innerText = "Restart Game";
     restartButton.classList.add("reset");
-    restartButtonImg.classList.add("restartButtonImg");
     bgTablero.classList.add("bg_tablero");
-    bgButton.classList.add("resetBg");
-    bgButton.append(restartButtonImg);
-    bgButton.append(restartButton);
     app.append(bgTablero);
-    app.append(bgButton);
+    app.append(restartButton);
   
     restartButton.addEventListener("click", resetJuego);
   };

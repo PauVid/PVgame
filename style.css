@@ -1,5 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+:root {
+  /* MARGIN */
+  --pv-margin-xs: 10px;
+  --pv-margin-s: 20px;
+  --pv-margin-m: 30px;
+  --pv-margin-l: 40px;
+  --pv-margin-xl: 50px;
+
+  /* PADDING */
+  --pv-padding-xs: 10px;
+  --pv-padding-s: 20px;
+  --pv-padding-m: 30px;
+  --pv-padding-l: 40px;
+  --pv-padding-xl: 50px;
+
+  /* GAP */
+  --pv-gap-xs: 10px;
+  --pv-gap-s: 15px;
+  --pv-gap-m: 20px;
+  --pv-gap-l: 25px;
+  --pv-gap-xl: 30px;
+
+  /* BORDER RADIUS */
+
+  --pv-borderR-s: 6px;
+  --pv-borderR-m: 8px;
+  
+}
+
 
 * {
   box-sizing: border-box;
@@ -16,12 +45,13 @@ body {
   align-items: center;
   justify-content: center;
   min-width: 400px;
-  min-height: 100vh;
+  min-height: 105vh;
   height: auto;
   background-image: url("/assets/BODY_BG_2.jpg");
-  background-position: top;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 h1 {
@@ -32,16 +62,18 @@ h1 {
 #app {
   width: 300px;
   min-width: 300px;
+  max-width: 300px;
   height: 260px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   justify-content: center;
   display: flex;
-  gap: 5px;
-  margin-bottom: 45px;
+  gap: calc(var(--pv-gap-xs) - 5px);
+  margin-bottom: calc(var(--pv-margin-l) + 5px);
   flex-direction: row;
   flex-wrap: wrap;
+
 }
 
 @media (max-width: 390px) {
@@ -127,11 +159,23 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   color: #c9c9c9;
-  background-color: transparent;
-  border: none;
+  background-color: #20110E;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 20px 50px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 900;
   font-size: 11px;
+}
+
+.quadblero {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    top: 25px;
+    min-width: 220px;
+    max-width: 220px;
 }
 
 .restartButtonImg{
@@ -147,7 +191,7 @@ h1 {
 
 h1, p {
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: var(--pv-margin-l);
 
 }
 
@@ -165,11 +209,11 @@ p {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 20px;
+  gap: var(--pv-gap-m);
 }
 
 .main-btn {
-  padding: 20px 70px;
+  padding: var(--pv-gap-m) 70px;
   background-color: white;
   border: none;
   border-radius: 6px;
@@ -179,8 +223,3 @@ p {
   font-size: 18px;
 }
 
-
-@media (max-height: 390px) {
-
-  
-}

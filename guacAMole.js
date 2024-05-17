@@ -187,6 +187,7 @@ export function juego3() {
           if (puntuacion === objetivo) {
               detenerJuego();
               const mensajeVictoria = document.createElement("div");
+              mensajeVictoria.classList.add("winner");
               mensajeVictoria.innerHTML = `
                   <h3>¡Enhorabuena aventurero/a!</h3>
                   <p>Lo has... conseguido... Muchas gracias por salvarnos a todos... yo... estoy demasiado herido... pa... para seguir... pe... pero ha sido un honor luchar a... a tu lado... mi... capitán.</p>

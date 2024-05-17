@@ -1,6 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
+:root {
+    /* MARGIN */
+    --pv-margin-xs: 10px;
+    --pv-margin-s: 20px;
+    --pv-margin-m: 30px;
+    --pv-margin-l: 40px;
+    --pv-margin-xl: 50px;
+  
+    /* PADDING */
+    --pv-padding-xs: 10px;
+    --pv-padding-s: 20px;
+    --pv-padding-m: 30px;
+    --pv-padding-l: 40px;
+    --pv-padding-xl: 50px;
+  
+    /* GAP */
+    --pv-gap-xs: 10px;
+    --pv-gap-s: 15px;
+    --pv-gap-m: 20px;
+    --pv-gap-l: 25px;
+    --pv-gap-xl: 30px;
+  
+    /* BORDER RADIUS */
+  
+    --pv-borderR-s: 6px;
+    --pv-borderR-m: 8px;
+    
+  }
+
 .players {
     height: 100svh;
     width: 100svw;
@@ -13,13 +42,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: var(--pv-gap-xs);
     justify-content: center;
     font-family: 'Times New Roman', Times, serif;
     padding: 20px;
     width: 53%;
     height: 200px;
-    margin: 40px auto;
+    margin: var(--pv-margin-l) auto;
     flex-wrap: wrap;
     align-content: center;
 }
@@ -43,7 +72,7 @@
     position: absolute;
     margin: auto;
     max-width: 400px;
-    gap: 15px;
+    gap: var(--pv-gap-s);
 
 }
 
@@ -79,7 +108,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 11px;
+    gap: calc(var(--pv-gap-xs) + 1px);
 }
 
 @media (max-width: 390px) {
@@ -94,7 +123,7 @@
         height: 91px;
         background-size: contain;
         background-repeat: no-repeat;
-        margin: 40px auto;
+        margin: var(--pv-margin-l) auto;
         flex-wrap: nowrap;
     }
 
@@ -138,10 +167,9 @@
 }
 
 .popup_div{
-    height: 234px;
     position: absolute;
     z-index: 9;
-    padding: 22px;
+    padding: calc(var(--pv-padding-s) + 2px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -150,9 +178,11 @@
     font-family: 'Pixelify Sans';
     max-width: 370px;
     min-width: 370px;
+    background-color: brown;
+    border-radius: 10px;
 }
 
-.popup_div > img {
+/* .popup_div > img {
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -160,7 +190,7 @@
     position: absolute;
     z-index: 7;
     bottom: 62px;
-}
+} */
 
 .popup_div > h3 {
     font-size: 34px;

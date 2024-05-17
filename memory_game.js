@@ -2,77 +2,16 @@ import './memory_game.css';
 
 export function juego2() {
     const cartas = [
-        {
-            title: "background",
-            id: 0,
-            flipped: false,
-            background: "/assets/card_bg.jpg",
-            matched: false,
-        },
-        {
-            title: "cardOne",
-            id: 0,
-            flipped: false,
-            background: "/assets/card_bg.jpg",
-            matched: false,
-        },
-        {
-            title: "cardTwo",
-            id: 0,
-            flipped: false,
-            background: "/assets/card_bg.jpg",
-            matched: false,
-        },
-        {
-            title: "cardThree",
-            id: 0,
-            flipped: false,
-            background: "/assets/card_bg.jpg",
-            matched: false,
-        },
-        {
-            title: "cardFour",
-            id: 0,
-            flipped: false,
-            background: "/assets/card_bg.jpg",
-            matched: false,
-        },  
-        {
-            title: "cardFive",
-            id: 0,
-            flipped: false,
-            background: "/assets/card_bg.jpg",
-            matched: false,
-        },
-        {
-            title: "cardSix",
-            id: 0,
-            flipped: false,
-            background: "/assets/card_bg.jpg",
-            matched: false,
-        },
-        {
-            title: "cardSeven",
-            id: 0,
-            flipped: false,
-            background: "/assets/card_bg.jpg",
-            matched: false,
-        },
-        {
-            title: "cardEight",
-            id: 0,
-            flipped: false,
-            background: "/assets/card_bg.jpg",
-            matched: false,
-        },
-        {
-            title: "cardNine",
-            id: 0,
-            flipped: false,
-            background: "/assets/card_bg.jpg",
-            matched: false,
-        },
-        // Removed the extra card object
+        { title: "background", id: 0, flipped: false, background: "/assets/card_bg.jpg", matched: false },
+        { title: "cardOne", id: 0, flipped: false, background: "/assets/card_bg.jpg", matched: false },
+        { title: "cardTwo", id: 0, flipped: false, background: "/assets/card_bg.jpg", matched: false },
+        { title: "cardThree", id: 0, flipped: false, background: "/assets/card_bg.jpg", matched: false },
+        { title: "cardFour", id: 0, flipped: false, background: "/assets/card_bg.jpg", matched: false },
+        { title: "cardFive", id: 0, flipped: false, background: "/assets/card_bg.jpg", matched: false },
+        { title: "cardSix", id: 0, flipped: false, background: "/assets/card_bg.jpg", matched: false },
+        { title: "cardSeven", id: 0, flipped: false, background: "/assets/card_bg.jpg", matched: false },
+        { title: "cardEight", id: 0, flipped: false, background: "/assets/card_bg.jpg", matched: false },
+        { title: "cardNine", id: 0, flipped: false, background: "/assets/card_bg.jpg", matched: false }
     ];
 
     let cartasGiradas = [];
@@ -80,7 +19,6 @@ export function juego2() {
 
     const cartaCreation = () => {
         const body = document.querySelector("#app");
-
         body.innerHTML = '';
         shuffle(cartas);
 
@@ -134,14 +72,16 @@ export function juego2() {
             puntuacion++;
             if (puntuacion === 5) { 
                 const winnerMsg = document.createElement("div");
-                winnerMsg.innerHTML(`
+                winnerMsg.classList.add("winner")
+                winnerMsg.innerHTML = `
                 <h3>¡Enhorabuena aventurero/a!</h3>
-                <p>Has logrado debilitar al malvado villano... aún así, no podemos cantar victória. Ahora es aún más peligroso que antes... tenemos que seguir.</p>
-                `);
+                <p>Has logrado debilitar al malvado villano... aún así, no podemos cantar victoria. Ahora es aún más peligroso que antes... tenemos que seguir.</p>
+                `;
                 const backButton = document.createElement('button');
                 backButton.textContent = 'Siguiente juego';
                 backButton.addEventListener('click', goBack);
-                buttonsDiv.appendChild(backButton);
+                winnerMsg.appendChild(backButton);
+                document.body.appendChild(winnerMsg);
             }
         } else {
             carta1.flipped = false;
@@ -158,7 +98,6 @@ export function juego2() {
     }
 
     function restartGame() {
-
         cartas.forEach(carta => {
             carta.flipped = false;
             carta.matched = false;
@@ -169,25 +108,23 @@ export function juego2() {
     }
 
     function goBack() {
-
         window.location.reload();
     }
 
     const buttonsDiv = document.createElement('div');
-    buttonsDiv.classList.add("buttonDiv")
+    buttonsDiv.classList.add("buttonDiv");
+
+    const buttonBack = document.createElement('button');
+    buttonBack.textContent = 'Go Back';
+    buttonBack.addEventListener('click', goBack);
 
     const restartButton = document.createElement('button');
     restartButton.textContent = 'Restart Game';
     restartButton.addEventListener('click', restartGame);
     buttonsDiv.appendChild(restartButton);
-
-    // const backButton = document.createElement('button');
-    // backButton.textContent = 'Go Back';
-    // backButton.addEventListener('click', goBack);
-    // buttonsDiv.appendChild(backButton);
+    buttonsDiv.appendChild(buttonBack);
 
     document.body.appendChild(buttonsDiv);
 
     cartaCreation();
 }
-
