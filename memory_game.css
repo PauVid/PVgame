@@ -33,9 +33,7 @@
 
 .carta {
     width: 60px;
-    height: 80px;
-    background-image: url('/assets/card_bg.jpg');
-    background-size: cover;
+
 }
 
 .buttonDiv{
@@ -61,29 +59,48 @@
 }
 
 .winner {
-    background-color: #161616;
     margin: auto;
     width: 70%;
-    padding: 20px;
     position: absolute;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #e7e7e7;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 35px 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size: 14px;
 }
 
 .winner > h3 {
-    color: white;
+    color: #20110E;
     font-size: 25px;
 }
 
 .winner > p {
     margin-bottom: 0;
+    color: #20110E;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
 }
 
 .winner > button {
-    padding: 10px;
-    border-radius: 6px;
-    border: none;
+    margin-bottom: var(--pv-margin-xs);
+    text-align: center;
+    text-transform: uppercase;
+    color: #c9c9c9;
+    background-color: #20110E;
+    text-wrap: nowrap;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 14px 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size: 14px;
 }
