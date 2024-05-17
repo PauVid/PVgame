@@ -97,10 +97,17 @@ body {
 }
 
 .buttons > button {
-  padding: var(--pv-padding-xs) var(--pv-padding-s);
-  background-color: white;
-  border: none;
-  border-radius: var(--pv-borderR-s);
+  margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    color: #c9c9c9;
+    background-color: #20110E;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 20px 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size: 11px;
 }
 
 .info {
@@ -115,21 +122,38 @@ body {
 
 #reiniciarBoton, 
 #atrasBoton {
-  padding: 8px var(--pv-padding-l);
-  margin-right: var(--pv-margin-xs);
-  border-radius: var(--pv-borderR-s);
-  border: none;
+  margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    color: #c9c9c9;
+    background-color: #20110E;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 20px 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size: 11px;
+    text-wrap: nowrap;
 }
 
 .botones {
   padding-bottom: var(--pv-padding-s);
+  display: flex;
+  gap: var(--pv-gap-s);
 }
 
 .informacion {
   margin-bottom: var(--pv-margin-xs);
-  background-color: #f1f1f1;
-  padding: 30px;
-  border-radius: 8px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #c9c9c9;
+  background-color: #20110E;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  padding: 20px 50px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 900;
+  font-size: 11px;
 }
 
 .winner {

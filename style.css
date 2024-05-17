@@ -209,17 +209,19 @@ p {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: var(--pv-gap-m);
 }
 
 .main-btn {
-  padding: var(--pv-gap-m) 70px;
-  background-color: white;
-  border: none;
-  border-radius: 6px;
-  font-family: "VT323", monospace;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 18px;
+  margin-bottom: var(--pv-margin-xs);
+    text-align: center;
+    text-transform: uppercase;
+    color: #c9c9c9;
+    background-color: #20110E;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 35px 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size: 14px;
 }
 
