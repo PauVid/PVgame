@@ -33,6 +33,9 @@
 
 .carta {
     width: 60px;
+    height: 80px;
+    background-image: url('/assets/card_bg.jpg');
+    background-size: cover;
 }
 
 .buttonDiv{
