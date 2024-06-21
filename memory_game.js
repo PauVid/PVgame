@@ -2,16 +2,16 @@ import './memory_game.css';
 
 export function juego2() {
     const cartas = [
-        { title: "background", id: 0, flipped: false, background: "assets/CARD_BG.jpg", matched: false },
-        { title: "cardOne", id: 0, flipped: false, background: "assets/CARD_BG.jpg", matched: false },
-        { title: "cardTwo", id: 0, flipped: false, background: "assets/CARD_BG.jpg", matched: false },
-        { title: "cardThree", id: 0, flipped: false, background: "assets/CARD_BG.jpg", matched: false },
-        { title: "cardFour", id: 0, flipped: false, background: "assets/CARD_BG.jpg", matched: false },
-        { title: "cardFive", id: 0, flipped: false, background: "assets/CARD_BG.jpg", matched: false },
-        { title: "cardSix", id: 0, flipped: false, background: "assets/CARD_BG.jpg", matched: false },
-        { title: "cardSeven", id: 0, flipped: false, background: "assets/CARD_BG.jpg", matched: false },
-        { title: "cardEight", id: 0, flipped: false, background: "assets/CARD_BG.jpg", matched: false },
-        { title: "cardNine", id: 0, flipped: false, background: "assets/CARD_BG.jpg", matched: false }
+        { title: "background", id: 0, flipped: false, background: "CARD_BG.jpg", matched: false },
+        { title: "cardOne", id: 0, flipped: false, background: "CARD_BG.jpg", matched: false },
+        { title: "cardTwo", id: 0, flipped: false, background: "CARD_BG.jpg", matched: false },
+        { title: "cardThree", id: 0, flipped: false, background: "CARD_BG.jpg", matched: false },
+        { title: "cardFour", id: 0, flipped: false, background: "CARD_BG.jpg", matched: false },
+        { title: "cardFive", id: 0, flipped: false, background: "CARD_BG.jpg", matched: false },
+        { title: "cardSix", id: 0, flipped: false, background: "CARD_BG.jpg", matched: false },
+        { title: "cardSeven", id: 0, flipped: false, background: "CARD_BG.jpg", matched: false },
+        { title: "cardEight", id: 0, flipped: false, background: "CARD_BG.jpg", matched: false },
+        { title: "cardNine", id: 0, flipped: false, background: "CARD_BG.jpg", matched: false }
     ];
 
     let cartasGiradas = [];
@@ -53,7 +53,7 @@ export function juego2() {
 
     function cartaGirada(cartaElement, carta) {
         if (!carta.flipped && !carta.matched && cartasGiradas.length < 2) { 
-            cartaElement.src = `assets/CARD_F_0${carta.id}.jpg`;
+            cartaElement.src = `CARD_F_0${carta.id}.jpg`;
             carta.flipped = true;
             cartasGiradas.push(carta);
     
