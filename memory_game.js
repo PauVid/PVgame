@@ -53,7 +53,7 @@ export function juego2() {
 
     function cartaGirada(cartaElement, carta) {
         if (!carta.flipped && !carta.matched && cartasGiradas.length < 2) { 
-            cartaElement.src = `CARD_F_0${carta.id}.jpg`;
+            cartaElement.src = `/api/assets/CARD_F_0${carta.id}.jpg`;
             carta.flipped = true;
             cartasGiradas.push(carta);
     
