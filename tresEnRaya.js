@@ -5,6 +5,7 @@ export function juego1() {
   let jugadorAct = "equis"; 
   let finJuego = false;
   
+  
   const mesa = () => {
     const tablero = document.querySelector("#app");
     const quadblero = document.createElement("div");
