@@ -83,6 +83,8 @@ export function juego2() {
                 winnerMsg.appendChild(backButton);
                 document.body.appendChild(winnerMsg);
             }
+
+            localStorage.setItem("memorygameWin", true);
         } else {
             carta1.flipped = false;
             carta2.flipped = false;
@@ -115,11 +117,11 @@ export function juego2() {
     buttonsDiv.classList.add("buttonDiv");
 
     const buttonBack = document.createElement('button');
-    buttonBack.textContent = 'Go Back';
+    buttonBack.textContent = 'Volver atrás';
     buttonBack.addEventListener('click', goBack);
 
     const restartButton = document.createElement('button');
-    restartButton.textContent = 'Restart Game';
+    restartButton.textContent = 'Reiniciar Juego';
     restartButton.addEventListener('click', restartGame);
     buttonsDiv.appendChild(restartButton);
     buttonsDiv.appendChild(buttonBack);

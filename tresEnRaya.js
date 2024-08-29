@@ -5,32 +5,58 @@ export function juego1() {
   let jugadorAct = "equis"; 
   let finJuego = false;
   
+  const volverInicio = () => {
+    function goBack() {
+      window.location.reload();
+    }
+
+    const buttonsDiv = document.createElement('div');
+    buttonsDiv.classList.add("buttonDiv");
+
+    const buttonBack = document.createElement('button');
+    buttonBack.textContent = 'Go Back';
+    buttonBack.addEventListener('click', goBack);
+  }
+
+  
   
   const mesa = () => {
     const tablero = document.querySelector("#app");
+    const quadroJuego = document.createElement("div");
+    quadroJuego.classList.add("quadroJuego");
     const quadblero = document.createElement("div");
     quadblero.classList.add("quadblero");
+    const bgTablero = document.createElement("div");
   
     for (let i = 1; i <= 9; i++) {
       const dividers = document.createElement("div");
       dividers.classList.add("unused");
-      quadblero.append(dividers);
-      tablero.append(quadblero)
+      bgTablero.append(dividers);
       cuadros.push(dividers);
     }
 
-    
+    quadroJuego.append(bgTablero);
+    quadblero.append(quadroJuego);
+    tablero.append(quadblero);
   
     distincionDiv();
+
+
+    function goBack() {
+      window.location.reload();
+    }
+
+    const buttonBack = document.createElement('button');
+    buttonBack.textContent = 'Go Back';
+    buttonBack.addEventListener('click', goBack);
+    buttonBack.classList.add("back");
   
-    const app = document.querySelector("#app");
-    const bgTablero = document.createElement("div");
+
     const restartButton = document.createElement("button");
     restartButton.innerText = "Restart Game";
     restartButton.classList.add("reset");
     bgTablero.classList.add("bg_tablero");
-    app.append(bgTablero);
-    app.append(restartButton);
+    quadblero.append(buttonBack, restartButton);
   
     restartButton.addEventListener("click", resetJuego);
   };
@@ -81,6 +107,7 @@ export function juego1() {
       }
     }
   
+    localStorage.setItem("3enrayaWin", true);
     return null; 
   };
   

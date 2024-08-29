@@ -68,6 +68,15 @@ const main = () => {
   tablero.append(mainText);
   tablero.append(text);
   tablero.append(gameButtons);
+
+
+  // const win1 = localStorage.getItem("3enrayaWin");
+  // const win2 = localStorage.getItem("memorygameWin");
+  // const win3 = localStorage.getItem("guacamoleWin");
+  // if(!win1) {
+  //   const gamesDisabled = document.querySelector(".mainDiv > :nth-child(2)");
+  //   const gamesDisabled = document.querySelector(".mainDiv > :nth-child(3)");
+  // }
 };
 
 main();
