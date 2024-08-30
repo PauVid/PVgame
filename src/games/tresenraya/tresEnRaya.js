@@ -1,4 +1,4 @@
-import './style.css'
+import './tresenraya.css'
 
 export function juego1() {
   const cuadros = [];

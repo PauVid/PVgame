@@ -1,8 +1,8 @@
-import { Layout } from './layout';
-import { juego1 } from './tresEnRaya.js';
+import { Layout } from './src/components/layout/layout.js';
+import { juego1 } from './src/games/tresenraya/tresEnRaya.js';
 import './style.css'
-import { juego2 } from './memory_game.js';
-import { juego3 } from './guacAMole.js';
+import { juego2 } from './src/games/memorygame/memory_game.js';
+import { juego3 } from './src/games/guacamole/guacAMole.js';
 
 
 // 3 EN RAYA
@@ -70,13 +70,6 @@ const main = () => {
   tablero.append(gameButtons);
 
 
-  // const win1 = localStorage.getItem("3enrayaWin");
-  // const win2 = localStorage.getItem("memorygameWin");
-  // const win3 = localStorage.getItem("guacamoleWin");
-  // if(!win1) {
-  //   const gamesDisabled = document.querySelector(".mainDiv > :nth-child(2)");
-  //   const gamesDisabled = document.querySelector(".mainDiv > :nth-child(3)");
-  // }
 };
 
 main();
